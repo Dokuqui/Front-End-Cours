@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Registry Page</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <form id="registrationForm">
+<body class="Registry">
+    <form id="registrationForm" class="registrationForm">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input class="Registry" type="text" id="username" name="username" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input class="Registry" type="password" id="password" name="password" required>
 
-        <button type="button" onclick="register()">Register</button>
+        <button class="Registry" type="button" onclick="register()">Register</button>
     </form>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
