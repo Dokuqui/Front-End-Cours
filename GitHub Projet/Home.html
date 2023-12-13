@@ -1,225 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page FootTick</title>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="burger-menu" id="burger-menu" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="site-name">
-            <h1>TribunesPass.fr</h1>
-            <img src="./images/european-soccer-logo-design-removebg-preview.png" alt="Football Logo">
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit">&#128269;</button> 
-            <a href="Login.html"><span>&#128101;</span></a>
-            <a href="Registry.html"><span>&#128100;</span> </a>
-        </div>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="site-name">
+        <a href="Home.html"><h1>TribunesPass.fr</h1></a>
+        <img
+          src="./images/european-soccer-logo-design-removebg-preview.png"
+          alt="Football Logo"
+        />
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search.."
+          name="search"
+          id="searchInput"
+        />
+        <button type="submit" id="searchButton">&#128269;</button>
+        <a href="Login.html"><span>&#128100;</span></a>
+        <a href="Registry.html"><span>&#128101;</span> </a>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="./images/man-city.jpg" style="width:100%">
-            </div>
-        
-            <div class="mySlides fade">
-                <img src="./images/todialbum.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="./images/u17.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="./images/Ivan-Toney.jpeg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="./images/Morocco-World-Cup-2022.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="./images/soccer-champions-psg.JPG" style="width:100%">
-            </div>
-        
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-        
-            <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="./images/man-city.jpg" style="width: 100%" />
         </div>
 
-        <section id="news">
-            <h2>Latest News</h2>
-
-            <div class="news-container">    
-            <div class="news-article">
-                <img src="./images/News1.jpg" alt="News Equipe de France">
-                <h3>Mauvaise nouvelle pour les Bleus !</h3>
-                <p>Le tirage au sort de l`Euro, qui a donné l`Autriche, 
-                    les Pays-Bas et un barragiste comme adversaires de l`équipe 
-                    de France, contraint les Bleus à affronter, en finissant 
-                    autant premiers que deuxièmes de la poule, un deuxième de 
-                    groupe en huitièmes de finale.</p>
-                <a href="https://www.sports.fr/football/equipe-de-france/mauvaise-nouvelle-pour-les-bleus-3-784503.html?utm_source=rss_feed&utm_medium=link&utm_campaign=unknown" class="btn-news">Read More</a>
-            </div>
-    
-            <div class="news-article">
-                <img src="./images/News2.jpg" alt="Le Barça">
-                <h3>Le Barça a trouvé le remplaçant de Ter Stegen</h3>
-                <p>Le Barça veut un gardien expérimenté. Ter Stegen risque d`être 
-                    absent pendant trois à quatre mois après avoir choisi de se 
-                    faire opérer du dos cette semaine. Inaki Pena est donc le 
-                    seul portier que le Barça a à sa disposition. Ce qui oblige 
-                    le club catalan à devoir se renforcer dans ce secteur. </p>
-                <a href="https://www.football365.fr/le-barca-a-trouve-le-remplacant-de-ter-stegen-10154680.html" class="btn-news">Read More</a>
-            </div>
-
-            <div class="news-article">
-                <img src="./images/News3.jpg" alt="OM">
-                <h3>L’incroyable statistique de l’OM</h3>
-                <p>L’Europe pour éclairer la grisaille ? Mal en point en championnat 
-                    (12ème à trois points du 16ème), l’Olympique de Marseille a validé 
-                    sa qualification pour les barrages d’Europa League ce jeudi au terme 
-                    d’un match spectaculaire remporté 4-3 face à l’Ajax Amsterdam. Leader 
-                    de son groupe, l’OM n’aura besoin que d’un nul à Brighton le 14 décembre 
-                    pour être directement qualifié en huitième de finale. </p>
-                <a href="https://www.football365.fr/lincroyable-statistique-de-lom-10153608.html" class="btn-news">Read More</a>
-            </div>
+        <div class="mySlides fade">
+          <img src="./images/todialbum.jpg" style="width: 100%" />
         </div>
-        </section>
 
-        <section id="upcoming-matches">
-            <h2>Upcoming Matches</h2>
-            <div class="match-container">
-            <div class="match-card">
-                <img src="./images/affiche-du-match-rb-leipzig.jpg" alt="Match Image">
-                <h3>PSG vs RB Leipzig</h3>
-                <p>Date: Janvier 15, 2023</p>
-                <p>Location: Paris</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
-    
-            <div class="match-card">
-                <img src="./images/Mar-vs-Losc.jpg" alt="Match Image">
-                <h3>Marseille vs LOSC</h3>
-                <p>Date: Janvier 20, 2023</p>
-                <p>Location: Lille</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
+        <div class="mySlides fade">
+          <img src="./images/u17.jpg" style="width: 100%" />
+        </div>
 
-            <div class="match-card">
-                <img src="./images/affiche-paris-saint-germain.jpg" alt="Match Image">
-                <h3>Brugge vs PSG</h3>
-                <p>Date: Fevrier 05, 2023</p>
-                <p>Location: Brugge</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
-            
-            <div class="match-card">
-                <img src="./images/Football-Ligue-1.png" alt="Match Image">
-                <h3>Lens vs PSG</h3>
-                <p>Date: Fevrier 20, 2023</p>
-                <p>Location: Lens</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
+        <div class="mySlides fade">
+          <img src="./images/Ivan-Toney.jpeg" style="width: 100%" />
+        </div>
 
-            <div class="match-card">
-                <img src="./images/Pronostic-Lens-Lille.png" alt="Match Image">
-                <h3>Lens vs Lille</h3>
-                <p>Date: Mars 08, 2023</p>
-                <p>Location: Lille</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
-            </div>
-        </section>
-    
-        <section id="popular-tickets">
-            <h2>Popular Tickets</h2>
-            <div class="ticket-container">
-            <div class="ticket-card">
-                <img src="./images/Borussia-vs-Lazio.jpg" alt="Ticket Image">
-                <h3>Borrusia vs Lazio</h3>
-                <p>Price: €150.00</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
-    
-            <div class="ticket-card">
-                <img src="./images/losc-vs-aek.jpg" alt="Ticket Image">
-                <h3>LOSC vs AEK</h3>
-                <p>Price: €35.00</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
+        <div class="mySlides fade">
+          <img src="./images/Morocco-World-Cup-2022.jpg" style="width: 100%" />
+        </div>
 
-            <div class="ticket-card">
-                <img src="./images/Diffusion-PSG-Manchester-City.jpg" alt="Ticket Image">
-                <h3>PSG vs ManCity</h3>
-                <p>Price: €215.00</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
+        <div class="mySlides fade">
+          <img src="./images/soccer-champions-psg.JPG" style="width: 100%" />
+        </div>
 
-            <div class="ticket-card">
-                <img src="./images/Man-United-Chelsea.jpg" alt="Ticket Image">
-                <h3>ManCity vs Chelsea</h3>
-                <p>Price: €187.00</p>
-                <a href="#" class="btn">Acheter</a>
-            </div>
-            </div>
-        </section>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+
+      <section id="news">
+        <h2>Dernières nouvelles</h2>
+
+        <div class="news-container">
+          <div class="news-article">
+            <img src="./images/News1.jpg" alt="News Equipe de France" />
+            <h3>Mauvaise nouvelle pour les Bleus !</h3>
+            <p>
+              Le tirage au sort de l`Euro, qui a donné l`Autriche, les Pays-Bas
+              et un barragiste comme adversaires de l`équipe de France,
+              contraint les Bleus à affronter, en finissant autant premiers que
+              deuxièmes de la poule, un deuxième de groupe en huitièmes de
+              finale.
+            </p>
+            <a
+              href="https://www.sports.fr/football/equipe-de-france/mauvaise-nouvelle-pour-les-bleus-3-784503.html?utm_source=rss_feed&utm_medium=link&utm_campaign=unknown"
+              class="btn-news"
+              >Read More</a
+            >
+          </div>
+
+          <div class="news-article">
+            <img src="./images/News2.jpg" alt="Le Barça" />
+            <h3>Le Barça a trouvé le remplaçant de Ter Stegen</h3>
+            <p>
+              Le Barça veut un gardien expérimenté. Ter Stegen risque d`être
+              absent pendant trois à quatre mois après avoir choisi de se faire
+              opérer du dos cette semaine. Inaki Pena est donc le seul portier
+              que le Barça a à sa disposition. Ce qui oblige le club catalan à
+              devoir se renforcer dans ce secteur.
+            </p>
+            <a
+              href="https://www.football365.fr/le-barca-a-trouve-le-remplacant-de-ter-stegen-10154680.html"
+              class="btn-news"
+              >Read More</a
+            >
+          </div>
+
+          <div class="news-article">
+            <img src="./images/News3.jpg" alt="OM" />
+            <h3>L’incroyable statistique de l’OM</h3>
+            <p>
+              L’Europe pour éclairer la grisaille ? Mal en point en championnat
+              (12ème à trois points du 16ème), l’Olympique de Marseille a validé
+              sa qualification pour les barrages d’Europa League ce jeudi au
+              terme d’un match spectaculaire remporté 4-3 face à l’Ajax
+              Amsterdam. Leader de son groupe, l’OM n’aura besoin que d’un nul à
+              Brighton le 14 décembre pour être directement qualifié en huitième
+              de finale.
+            </p>
+            <a
+              href="https://www.football365.fr/lincroyable-statistique-de-lom-10153608.html"
+              class="btn-news"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="upcoming-matches">
+        <h2>Matchs à venir</h2>
+        <div class="match-container">
+          <div class="match-card">
+            <img
+              src="./images/affiche-du-match-rb-leipzig.jpg"
+              alt="Match Image"
+            />
+            <h3>PSG vs RB Leipzig</h3>
+            <p>Date: Janvier 15, 2023</p>
+            <p>Location: Paris</p>
+            <a href="Ticket PSG.html" class="btn">Acheter</a>
+          </div>
+
+          <div class="match-card">
+            <img src="./images/Mar-vs-Losc.jpg" alt="Match Image" />
+            <h3>Marseille vs LOSC</h3>
+            <p>Date: Janvier 20, 2023</p>
+            <p>Location: Lille</p>
+            <a href="#" class="btn">Acheter</a>
+          </div>
+
+          <div class="match-card">
+            <img src="./images/Football-Ligue-1.png" alt="Match Image" />
+            <h3>Lens vs PSG</h3>
+            <p>Date: Fevrier 20, 2023</p>
+            <p>Location: Lens</p>
+            <a href="#" class="btn">Acheter</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="popular-tickets">
+        <h2>Billets populaires</h2>
+        <div class="ticket-container">
+          <div class="ticket-card">
+            <img
+              src="./images/manchester-city-vs-dortmund.jpg"
+              alt="Ticket Image"
+            />
+            <h3>Borrusia vs ManCity</h3>
+            <p>Price: €150.00</p>
+            <a href="Ticket City.html" class="btn">Acheter</a>
+          </div>
+
+          <div class="ticket-card">
+            <img
+              src="./images/Diffusion-PSG-Manchester-City.jpg"
+              alt="Ticket Image"
+            />
+            <h3>PSG vs ManCity</h3>
+            <p>Price: €215.00</p>
+            <a href="#" class="btn">Acheter</a>
+          </div>
+
+          <div class="ticket-card">
+            <img src="./images/Man-United-Chelsea.jpg" alt="Ticket Image" />
+            <h3>ManCity vs Chelsea</h3>
+            <p>Price: €187.00</p>
+            <a href="#" class="btn">Acheter</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer id="footer">
-        <div class="container-footer">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="./images/european-soccer-logo-design-removebg-preview.png" alt="Football Logo">
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="Home.html">Home</a></li>
-                        <li><a href="Services.html">Matches</a></li>
-                        <li><a href="Services.html">Tickets</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">Twitter</a>
-                    <a href="#" class="social-icon">Instagram</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; Boutique de billets de football 2023. Tous droits réservés.</p>
-                <p>Address: 47 Avenue Vauban, Lille, France</p>
-                <p>Email: TribunesPass@example.fr | Phone: +3 (9) 64-29-3719</p>
-            </div>
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="./images/european-soccer-logo-design-removebg-preview.png"
+              alt="Football Logo"
+            />
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Services.html">Matches</a></li>
+              <li><a href="Services.html">Tickets</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; Boutique de billets de football 2023. Tous droits réservés.
+          </p>
+          <p>Address: 47 Avenue Vauban, Lille, France</p>
+          <p>
+            Email:
+            <a href="mailto:TribunesPass@example.fr" class="email-site"
+              >TribunesPass@example.fr</a
+            >
+            | Phone: +3 (9) 64-29-3719
+          </p>
+        </div>
+      </div>
     </footer>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

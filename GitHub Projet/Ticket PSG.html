@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket PSG Page FootTick</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="site-name">
+        <a href="Home.html"><h1>TribunesPass.fr</h1></a>
+        <img
+          src="./images/european-soccer-logo-design-removebg-preview.png"
+          alt="Football Logo"
+        />
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search.."
+          name="search"
+          id="searchInput"
+        />
+        <button type="submit" id="searchButton">&#128269;</button>
+        <a href="Login.html"><span>&#128101;</span></a>
+        <a href="Registry.html"><span>&#128100;</span> </a>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="info-container">
+      <div class="info-image">
+        <img
+          src="./images/affiche-du-match-rb-leipzig.jpg"
+          alt="PSG vs RB Leipzig"
+        />
+      </div>
+
+      <div class="match-info">
+        <h1>PSG Match Ticket</h1>
+
+        <section id="ticketDetails">
+          <h2>Match Details</h2>
+          <p>Team: Paris Saint-Germain (PSG)</p>
+          <p>Opponent: RB Leipzig</p>
+          <p>Date: Janvier 15, 2023</p>
+          <p>Location: Paris, Princes Park</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="selection-container">
+      <section id="ticketForm" class="ticket-form">
+        <h2>Order Your Tickets</h2>
+        <form id="ticketOrderForm">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="ticketQuantity">Number of Tickets:</label>
+          <input
+            type="number"
+            id="ticketQuantity"
+            name="ticketQuantity"
+            min="1"
+            required
+          />
+
+          <label for="ticketCategory">Ticket Category:</label>
+          <select id="ticketCategory" name="ticketCategory">
+            <option value="standard">Standard</option>
+            <option value="vip">VIP</option>
+          </select>
+
+          <button type="submit">Purchase Tickets</button>
+        </form>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="./images/european-soccer-logo-design-removebg-preview.png"
+              alt="Football Logo"
+            />
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Services.html">Matches</a></li>
+              <li><a href="Services.html">Tickets</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; Boutique de billets de football 2023. Tous droits réservés.
+          </p>
+          <p>Address: 47 Avenue Vauban, Lille, France</p>
+          <p>Email: TribunesPass@example.fr | Phone: +3 (9) 64-29-3719</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
