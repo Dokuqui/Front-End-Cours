@@ -212,3 +212,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("Contact.html")) {
+    const contactForm = document.querySelector(".contact");
+
+    const savedFormData = {
+      firstname: "",
+      lastname: "",
+      country: "",
+      date: "",
+      subject: "",
+    };
+
+    document.getElementById("fname").value = savedFormData.firstname;
+    document.getElementById("lname").value = savedFormData.lastname;
+    document.getElementById("country").value = savedFormData.country;
+    document.getElementById("date").value = savedFormData.date;
+    document.getElementById("subject").value = savedFormData.subject;
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = {
+        firstname: document.getElementById("fname").value,
+        lastname: document.getElementById("lname").value,
+        country: document.getElementById("country").value,
+        date: document.getElementById("date").value,
+        subject: document.getElementById("subject").value,
+      };
+
+      console.log("Form Data:", formData);
+    });
+
+    const yourButton = document.getElementById("searchButton");
+    yourButton.addEventListener("click", () => {
+      console.log("Button Clicked!");
+    });
+  }
+});
