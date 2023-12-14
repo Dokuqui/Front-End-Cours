@@ -18,7 +18,17 @@ Architecrute de site:
 
    CSS
 
-1. Style.css: Tout les styles qui nous outilis sur notre projet. /by Illia Semenov + Armel Bougma
+   Afin de mieux visualiser la structure du style, différents fichiers ont été créés et importés dans le fichier principal.
+
+ /css
+  |-- about.css  Style pour page About                       /by Armel Bougma
+  |-- contact.css  Style pour page Contact                   /by Armel Bougma
+  |-- footer.css   Style pour Footer de projet               /by Illia Semenov
+  |-- header.css   Style pour Header and Burger              /by Illia Semenov
+  |-- login.css  Style pour page Login, Registry et Success  /by Illia Semenov + Abougma Armel
+  |-- main.css  Style pour Home page et body de projet       /by Illia Semenov + Abougma Armel
+  |-- services.css  Style pour page de Services              /by Illia Semenov
+  |-- ticket.css   Style pour pages des Ticket               /by Illia Semenov + Abougma Armel
 
    JavaScript
 
