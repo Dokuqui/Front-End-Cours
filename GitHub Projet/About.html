@@ -1,34 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page FootTick</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page FootTick</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="burger-menu" id="burger-menu" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit">&#128269;</button> 
-            <a href="Login.html"><span>&#128101;</span></a>
-            <a href="Registry.html"><span>&#128100;</span> </a>
-        </div>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="site-name">
+        <a href="Home.html"><h1>TribunesPass.fr</h1></a>
+        <img
+          src="./images/european-soccer-logo-design-removebg-preview.png"
+          alt="Football Logo"
+        />
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search.."
+          name="search"
+          id="searchInput"
+        />
+        <button type="submit" id="searchButton">&#128269;</button>
+        <a href="Login.html"><span>&#128100;</span></a>
+        <a href="Registry.html"><span>&#128101;</span> </a>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
+    <div class="about-section">
+      <h1>About Page</h1>
+      <p>Bienvenu sur la platforme de vente de ticket en ligne <b>TribunesPass.fr</b></p>
+      <p>
+        Chez TribunesPass.fr, nous sommes passionnés par l'art du football et
+        nous sommes déterminés à vous offrir bien plus qu'une simple expérience
+        de match. Nous comprenons que chaque match est unique, et c'est pourquoi
+        nous nous efforçons de rendre chaque moment mémorable pour vous.
+      </p>
+      <p>
+        Notre plateforme offre non seulement des billets pour les matchs de
+        football, mais également des packages exclusifs qui comprennent des
+        expériences VIP, des rencontres avec des joueurs, et bien plus encore.
+        Nous sommes là pour vous offrir un accès privilégié à l'univers
+        passionnant du football, que vous soyez un passionné de longue date ou
+        que vous découvriez ce sport incroyable pour la première fois.
+      </p>
+      <p>
+        Rejoignez-nous dans cette aventure et laissez TribunesPass.fr être votre
+        guide ultime pour vivre la passion du football comme jamais auparavant.
+        Nous sommes impatients de partager des moments inoubliables avec vous,
+        saison après saison.
+      </p>
+    </div>
+
+    <h2 style="text-align: center">Team</h2>
+    <div class="about-row">
+      <div class="about-column">
+        <div class="about-card">
+          <img src="./images/Armel.jpg" alt="Armel" class="about-img" />
+          <div class="about-container">
+            <h2>BOUGMA Armel</h2>
+            <p class="about-title">CEO & Founder</p>
+            <p>armel@example.com</p>
+            <p>
+              <button class="about-button">
+                <a href="mailto:armel@example.com" class="email-site"
+                  >Contact</a
+                >
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-column">
+        <div class="about-card">
+          <img src="./images/Illia.png" alt="Illia" class="about-img" />
+          <div class="about-container">
+            <h2>SEMENOV Illia</h2>
+            <p class="about-title">CEO & Founder</p>
+            <p>illia@example.com</p>
+            <p>
+              <button class="about-button">
+                <a href="mailto:illia@example.com" class="email-site"
+                  >Contact</a
+                >
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-column">
+        <div class="about-card">
+          <img src="./images/JuniaXP.png" alt="JuniaXP" class="about-img" />
+          <div class="about-container">
+            <h2>JUNIA XP</h2>
+            <p class="title">Designer</p>
+            <p>juniaxp@example.com</p>
+            <p>
+              <button class="about-button">
+                <a href="mailto:juniaxp@example.com" class="email-site"
+                  >Contact</a
+                >
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="./images/european-soccer-logo-design-removebg-preview.png"
+              alt="Football Logo"
+            />
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Services.html">Matches</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; Boutique de billets de football 2023. Tous droits réservés.
+          </p>
+          <p>Address: 47 Avenue Vauban, Lille, France</p>
+          <p>
+            Email:
+            <a href="mailto:TribunesPass@example.fr" class="email-site"
+              >TribunesPass@example.fr</a
+            >
+            | Phone: +3 (9) 64-29-3719
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

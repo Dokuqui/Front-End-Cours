@@ -1,34 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page FootTick</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page FootTick</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="burger-menu" id="burger-menu" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit">&#128269;</button> 
-            <a href="Login.html"><span>&#128101;</span></a>
-            <a href="Registry.html"><span>&#128100;</span> </a>
-        </div>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="site-name">
+        <a href="Home.html"><h1>TribunesPass.fr</h1></a>
+        <img
+          src="./images/european-soccer-logo-design-removebg-preview.png"
+          alt="Football Logo"
+        />
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search.."
+          name="search"
+          id="searchInput"
+        />
+        <button type="submit" id="searchButton">&#128269;</button>
+        <a href="Login.html"><span>&#128100;</span></a>
+        <a href="Registry.html"><span>&#128101;</span> </a>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>
+        Si vous avez des questions ou souhaitez entrer en contact, veuillez
+        utiliser le formulaire de contact ci-dessous.
+      </p>
+      <form class="contact" action="action_page.php">
+        <label class="contact" for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          class="contact"
+          name="firstname"
+          placeholder="Your name.."
+        />
+
+        <label class="contact" for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          class="contact"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+
+        <label class="contact" for="country">Country</label>
+        <select id="country" class="contact" name="country">
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Spain">Spain</option>
+          <option value="England">England</option>
+        </select>
+
+        <label class="contact" for="date">Date :</label>
+        <input class="contact" type="date" id="date" name="date" />
+
+        <label class="contact" for="subject">Subject</label>
+        <textarea
+          id="subject"
+          class="contact"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+
+        <input class="contact" type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <footer id="footer">
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="./images/european-soccer-logo-design-removebg-preview.png"
+              alt="Football Logo"
+            />
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Services.html">Matches</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; Boutique de billets de football 2023. Tous droits réservés.
+          </p>
+          <p>Address: 47 Avenue Vauban, Lille, France</p>
+          <p>
+            Email:
+            <a href="mailto:TribunesPass@example.fr" class="email-site"
+              >TribunesPass@example.fr</a
+            >
+            | Phone: +3 (9) 64-29-3719
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
