@@ -1,0 +1,107 @@
+#overviewButton {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: yellow;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#overviewButton:hover {
+  background-color: #3e8e41;
+}
+
+#overviewButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#subscription {
+  text-align: center;
+}
+
+#subscriptionForm .subscription-input {
+  display: block;
+  width: 30%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-btn {
+  background-color: #0074d9;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.subscription-plans {
+  display: flex;
+  justify-content: space-around;
+}
+
+.subscription-plan {
+  max-width: 300px;
+  background-color: #9ade7b;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  text-align: center;
+}
+
+.subscription-plan h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subscribe-btn {
+  background-color: #d14d72;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-btn:hover {
+  background-color: #45a049;
+}
