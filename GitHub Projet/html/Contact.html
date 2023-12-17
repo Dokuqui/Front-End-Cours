@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ticket PSG Page FootTick</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <title>Contact Page FootTick</title>
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
     <header>
@@ -16,7 +16,7 @@
       <div class="site-name">
         <a href="Home.html"><h1>TribunesPass.fr</h1></a>
         <img
-          src="./images/european-soccer-logo-design-removebg-preview.png"
+          src="../images/european-soccer-logo-design-removebg-preview.png"
           alt="Football Logo"
         />
       </div>
@@ -28,8 +28,8 @@
           id="searchInput"
         />
         <button type="submit" id="searchButton">&#128269;</button>
-        <a href="Login.html"><span>&#128101;</span></a>
-        <a href="Registry.html"><span>&#128100;</span> </a>
+        <a href="Login.html"><span>&#128100;</span></a>
+        <a href="Registry.html"><span>&#128101;</span> </a>
       </div>
       <nav class="menu" id="menu">
         <ul>
@@ -41,55 +41,53 @@
       </nav>
     </header>
 
-    <div class="info-container">
-      <div class="info-image">
-        <img
-          src="./images/affiche-du-match-rb-leipzig.jpg"
-          alt="PSG vs RB Leipzig"
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>
+        Si vous avez des questions ou souhaitez entrer en contact, veuillez
+        utiliser le formulaire de contact ci-dessous.
+      </p>
+      <form class="contact" action="action_page.php">
+        <label class="contact" for="fname">Prénom</label>
+        <input
+          type="text"
+          id="fname"
+          class="contact"
+          name="firstname"
+          placeholder="Votre prénom.."
         />
-      </div>
 
-      <div class="match-info">
-        <h1>PSG Match Ticket</h1>
+        <label class="contact" for="lname">Nom</label>
+        <input
+          type="text"
+          id="lname"
+          class="contact"
+          name="lastname"
+          placeholder="Votre nom.."
+        />
 
-        <section id="ticketDetails">
-          <h2>Match Details</h2>
-          <p>Team: Paris Saint-Germain (PSG)</p>
-          <p>Opponent: RB Leipzig</p>
-          <p>Date: Janvier 15, 2023</p>
-          <p>Location: Paris, Princes Park</p>
-        </section>
-      </div>
-    </div>
+        <label class="contact" for="country">Pays</label>
+        <select id="country" class="contact" name="country">
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Spain">Spain</option>
+          <option value="England">England</option>
+        </select>
 
-    <div class="selection-container">
-      <section id="ticketForm" class="ticket-form">
-        <h2>Order Your Tickets</h2>
-        <form id="ticketOrderForm">
-          <label for="fullName">Full Name:</label>
-          <input type="text" id="fullName" name="fullName" required />
+        <label class="contact" for="date">Date :</label>
+        <input class="contact" type="date" id="date" name="date" />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+        <label class="contact" for="subject">Sujet</label>
+        <textarea
+          id="subject"
+          class="contact"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
 
-          <label for="ticketQuantity">Number of Tickets:</label>
-          <input
-            type="number"
-            id="ticketQuantity"
-            name="ticketQuantity"
-            min="1"
-            required
-          />
-
-          <label for="ticketCategory">Ticket Category:</label>
-          <select id="ticketCategory" name="ticketCategory">
-            <option value="standard">Standard</option>
-            <option value="vip">VIP</option>
-          </select>
-
-          <button type="submit">Purchase Tickets</button>
-        </form>
-      </section>
+        <input class="contact" type="submit" value="Submit" />
+      </form>
     </div>
 
     <footer id="footer">
@@ -97,7 +95,7 @@
         <div class="footer-content">
           <div class="footer-logo">
             <img
-              src="./images/european-soccer-logo-design-removebg-preview.png"
+              src="../images/european-soccer-logo-design-removebg-preview.png"
               alt="Football Logo"
             />
           </div>
@@ -130,6 +128,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
