@@ -1,3 +1,4 @@
+//Burger Menu Function
 function toggleMenu() {
   const burgerMenu = document.getElementById("burger-menu");
   const menu = document.getElementById("menu");
@@ -24,8 +25,10 @@ function scrollFunction() {
   const burgerMenu = document.getElementById("burger-menu");
   const siteName = document.querySelector(".site-name");
 
-  burgerMenu.style.padding = "6px";
-  siteName.style.fontSize = "17px";
+  if (burgerMenu && siteName) {
+    burgerMenu.style.padding = "6px";
+    siteName.style.fontSize = "17px";
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,25 +36,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const searchButton = document.getElementById("searchButton");
 
-  searchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+  if (searchForm && searchInput && searchButton) {
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-    const searchQuery = searchInput.value;
-    console.log("Search query:", searchQuery);
-  });
+      const searchQuery = searchInput.value;
+      console.log("Search query:", searchQuery);
+    });
 
-  searchInput.addEventListener("change", (event) => {
-    const inputValue = event.target.value;
-    console.log("Input value:", inputValue);
-  });
+    searchInput.addEventListener("change", (event) => {
+      const inputValue = event.target.value;
+      console.log("Input value:", inputValue);
+    });
 
-  searchButton.addEventListener("click", (event) => {
-    event.preventDefault();
+    searchButton.addEventListener("click", (event) => {
+      event.preventDefault();
 
-    searchForm.dispatchEvent(new Event("submit"));
-  });
+      searchForm.dispatchEvent(new Event("submit"));
+    });
+  }
 });
 
+// Carrousel Function
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("dot");
@@ -113,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Login And Registry page function
 function register() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -143,6 +150,7 @@ function login() {
   }
 }
 
+//Services page function
 document.addEventListener("DOMContentLoaded", () => {
   const overviewModal = document.getElementById("overviewModal");
   const overviewButton = document.getElementById("overviewButton");
@@ -189,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Ticket order function
 document.addEventListener("DOMContentLoaded", () => {
   const ticketForm = document.getElementById("ticketOrderForm");
 
@@ -213,6 +222,56 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      if (!validateForm()) {
+        event.preventDefault();
+      } else {
+        const destinationPage = determineDestinationPage();
+        form.action = destinationPage;
+      }
+    });
+  }
+
+  function validateForm() {
+    let isValid = true;
+
+    const fullNameInput = document.getElementById("fname");
+    const emailInput = document.getElementById("email");
+
+    if (fullNameInput) {
+      if (!fullNameInput.value.trim()) {
+        isValid = false;
+        console.error("Full Name must be filled out");
+      }
+      logInputValue("Full Name", fullNameInput.value.trim());
+    }
+
+    if (emailInput) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        isValid = false;
+        console.error("Invalid Email address");
+      }
+      logInputValue("Email", emailInput.value.trim());
+    }
+
+    return isValid;
+  }
+
+  function logInputValue(label, value) {
+    console.log(`${label}: ${value}`);
+  }
+
+  function determineDestinationPage() {
+    return "./Buy.html";
+  }
+});
+
+//Contact form function
 document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.includes("Contact.html")) {
     const contactForm = document.querySelector(".contact");
@@ -243,11 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       console.log("Form Data:", formData);
-    });
-
-    const yourButton = document.getElementById("searchButton");
-    yourButton.addEventListener("click", () => {
-      console.log("Button Clicked!");
     });
   }
 });
