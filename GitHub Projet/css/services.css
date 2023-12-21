@@ -73,6 +73,7 @@
 
 .subscription-plans {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -104,4 +105,14 @@
 
 .subscribe-btn:hover {
   background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+  #subscriptionForm .subscription-input {
+    width: 100%;
+  }
+
+  .subscription-plan {
+    max-width: 100%;
+  }
 }

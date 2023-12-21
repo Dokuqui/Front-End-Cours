@@ -24,6 +24,7 @@ main {
 
 .slideshow-container {
   max-width: 1000px;
+  border-radius: 4px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -33,6 +34,15 @@ main {
 .mySlides {
   display: none;
   max-height: 525px;
+  text-align: center;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: inline-block;
 }
 
 .prev,
@@ -101,6 +111,21 @@ main {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .mySlides {
+    max-height: 170px;
+  }
+
+  .mySlides img {
+    max-width: 95%;
+  }
+
+  .prev,
+  .next {
+    font-size: 14px;
+  }
+}
+
 #news {
   text-align: center;
   margin-bottom: 40px;
@@ -163,35 +188,38 @@ h2 {
 
 .match-container,
 .ticket-container {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .match-card,
 .ticket-card {
-  max-width: 550px;
+  max-width: 700px;
   background-color: #fff;
   border-radius: 8px;
-  padding: 5px;
   margin: 0 15px 20px 15px;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .match-card img,
 .ticket-card img {
-  max-width: 45%;
-  max-height: 60%;
+  max-width: 60%;
+  max-height: 45%;
   border-radius: 6px;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .btn {
-  display: inline-block;
+  display: grid;
   margin-top: 10px;
+  margin-left: 0;
+  margin-bottom: 10px;
   text-decoration: none;
   background-color: #4caf50;
   color: #fff;

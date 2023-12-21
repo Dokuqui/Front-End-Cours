@@ -11,6 +11,7 @@
 
 .info-image img {
   max-width: 100%;
+  border-radius: 4px;
   height: 95%;
   object-fit: cover;
 }
@@ -23,6 +24,7 @@
 
 .match-info {
   background-color: #fff;
+  font-size: 20px;
   border-radius: 8px;
   padding: 40px;
   margin-bottom: 20px;
@@ -30,6 +32,8 @@
 
 .match-info h1 {
   color: #00529c;
+  text-align: center;
+  justify-content: center;
 }
 
 .ticket-form {
@@ -53,7 +57,7 @@
 
 .ticket-form button {
   background-color: orange;
-  color: #fff;
+  text-decoration: none;
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -61,5 +65,21 @@
 }
 
 .ticket-form button:hover {
-  background-color: #004080;
+  background-color: #ADA993;
+}
+
+@media screen and (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .match-info {
+    padding: 20px;
+  }
 }
