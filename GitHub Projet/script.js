@@ -150,6 +150,14 @@ function login() {
   }
 }
 
+function goToRegister() {
+  const register = document.getElementsByClassName("register");
+
+  if (register) {
+    window.location.href = "Registry.html";
+  }
+}
+
 //Services page function
 document.addEventListener("DOMContentLoaded", () => {
   const overviewModal = document.getElementById("overviewModal");

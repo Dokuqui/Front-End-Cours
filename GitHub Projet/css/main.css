@@ -24,6 +24,7 @@ main {
 
 .slideshow-container {
   max-width: 1000px;
+  border-radius: 4px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -33,6 +34,15 @@ main {
 .mySlides {
   display: none;
   max-height: 525px;
+  text-align: center;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: inline-block;
 }
 
 .prev,
@@ -98,6 +108,21 @@ main {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mySlides {
+    max-height: 170px;
+  }
+
+  .mySlides img {
+    max-width: 95%;
+  }
+
+  .prev,
+  .next {
+    font-size: 14px;
   }
 }
 
@@ -170,42 +195,52 @@ h2 {
 
 .match-card,
 .ticket-card {
-  max-width: 550px;
+  width: 500px;
+  max-height: 500px;
   background-color: #fff;
   border-radius: 8px;
-  padding: 5px;
-  margin: 0 15px 20px 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .match-card img,
 .ticket-card img {
-  max-width: 45%;
-  max-height: 60%;
+  max-width: 60%;
+  max-height: 45%;
   border-radius: 6px;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 10px;
+  display: grid;
+  margin-left: 0;
+  margin-bottom: 15px;
   text-decoration: none;
   background-color: #4caf50;
   color: #fff;
   border-radius: 4px;
-  padding: 10px 10px;
+  padding: 15px 15px;
+  align-items: center;
 }
 
 .btn:hover {
   background-color: #45a049;
 }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .match-container,
+  .ticket-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match-card,
+  .ticket-card {
+    width: 100%;
+  }
 }

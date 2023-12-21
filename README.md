@@ -4,9 +4,9 @@ Participants : Semenov Illia, Armel Bougma
 
 Architecrute de site:
 
-   HTML
+   [HTML]
 
-/html
+`HTML`
 
 1. Home Page: Main page avec information.                       /by Illia Semenov
 2. Services Page: Page pour achete ticket et subsciption.       /by Illia Semenov
@@ -15,16 +15,17 @@ Architecrute de site:
 5. Ticket PSG Page: Page de ticket pour achete.                 /by Illia Semenov
 6. Ticket ManCity Page: Page de ticket pour achete.             /by Armel Bougma
 7. Registry Page                                                /by Illia Semenov
-8. Success Page: Apres quelle afficher aprés success Registry.  /by Semenov Illia
+8. Success Page: Apres quelle afficher aprés success Registry.  /by Illia Semenov
 9. Login Page                                                   /by Illia Semenov
 10. Checkout page: Pour acheter ticket                          /by Armel Bougma
 11. Buy page: Success page aprés checkout form                  /by Armel Bougma
+12. 404 page: Page d'error                                      /by Illia Semenov
 
-   CSS
+   [CSS]
 
    Afin de mieux visualiser la structure du style, différents fichiers ont été créés et importés dans le fichier principal.
 
- /css
+`CSS`
 
   1. about.css  Style pour page About                       /by Armel Bougma
   2. contact.css  Style pour page Contact                   /by Armel Bougma
@@ -35,8 +36,9 @@ Architecrute de site:
   7. services.css  Style pour page de Services              /by Illia Semenov
   8. ticket.css   Style pour pages des Ticket               /by Illia Semenov + Abougma Armel
   9. checkout.css Style pour checkout form après ticket     /by Armel Bougma
+  10. 404.css Style pour page 404                           /by Illia Semenov
 
-   JavaScript
+   [JavaScript]
 
 1. script.js: Fiche avec functionalite de notre site.            /by Illia Semenov + Armel Bougma
 

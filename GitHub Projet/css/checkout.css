@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .row {
@@ -87,9 +87,9 @@ span.price {
   color: grey;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 
@@ -109,4 +109,14 @@ span.price {
 
 .Success a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .Success {
+    text-align: center;
+  }
+
+  .Success h1 {
+    font-size: 24px;
+  }
 }
