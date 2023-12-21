@@ -188,21 +188,22 @@ h2 {
 
 .match-container,
 .ticket-container {
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .match-card,
 .ticket-card {
-  max-width: 700px;
+  width: 500px;
+  max-height: 500px;
   background-color: #fff;
   border-radius: 8px;
-  margin: 0 15px 20px 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .match-card img,
@@ -217,23 +218,29 @@ h2 {
 
 .btn {
   display: grid;
-  margin-top: 10px;
   margin-left: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-decoration: none;
   background-color: #4caf50;
   color: #fff;
   border-radius: 4px;
-  padding: 10px 10px;
+  padding: 15px 15px;
+  align-items: center;
 }
 
 .btn:hover {
   background-color: #45a049;
 }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .match-container,
+  .ticket-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match-card,
+  .ticket-card {
+    width: 100%;
+  }
 }

@@ -5,14 +5,28 @@
   display: flex;
 }
 
-.info-image {
+.info-image-PSG {
   margin-right: 20px;
+  margin: 20px 10px;
 }
 
-.info-image img {
+.info-image-PSG img {
   max-width: 100%;
-  border-radius: 4px;
-  height: 95%;
+  border-radius: 8px; 
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-image-City {
+  margin-right: 20px;
+  margin: 20px 10px;
+}
+
+.info-image-City img {
+  max-width: 100%;
+  border-radius: 8px; 
+  height: 60%; 
+  width: 95%;
   object-fit: cover;
 }
 
@@ -22,15 +36,26 @@
   padding: 20px;
 }
 
-.match-info {
+.match-info-PSG {
   background-color: #fff;
   font-size: 20px;
   border-radius: 8px;
   padding: 40px;
-  margin-bottom: 20px;
+  width: 600px;
+  margin: 20px auto;
 }
 
-.match-info h1 {
+.match-info-City {
+  background-color: #fff;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 60px;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.match-info-PSG h1,
+.match-info-City h1 {
   color: #00529c;
   text-align: center;
   justify-content: center;
@@ -74,12 +99,22 @@
     align-items: center;
   }
 
-  .info-image {
+  .info-image-PSG,
+  .info-image-City {
     margin-right: 0;
     margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
   }
 
-  .match-info {
+  .info-image-City img {
+    height: 100%; 
+    width: 100%;
+  }
+
+  .match-info-PSG,
+  .match-info-City {
     padding: 20px;
+    max-width: 325px;
   }
 }
