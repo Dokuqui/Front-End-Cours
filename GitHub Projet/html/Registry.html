@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registry Page</title>
     <link rel="stylesheet" href="../css/login.css" />
-</head>
-<body class="Registry">
+  </head>
+  <body class="Registry">
+    <div class="return-home">
+      <a href="./Home.html">
+        <button class="home-button">Home</button>
+      </a>
+    </div>
     <form id="registrationForm" class="registrationForm">
-        <label for="username">Username:</label>
-        <input class="Registry" type="text" id="username" name="username" required>
+      <label for="username">Username:</label>
+      <input
+        class="Registry"
+        type="text"
+        id="username"
+        name="username"
+        required
+      />
 
-        <label for="password">Password:</label>
-        <input class="Registry" type="password" id="password" name="password" required>
+      <label for="password">Password:</label>
+      <input
+        class="Registry"
+        type="password"
+        id="password"
+        name="password"
+        required
+      />
 
-        <button class="Registry" type="button" onclick="register()">Register</button>
+      <button class="Registry" type="button" onclick="register()">
+        Register
+      </button>
     </form>
 
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>

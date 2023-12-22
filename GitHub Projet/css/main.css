@@ -208,7 +208,7 @@ h2 {
 
 .match-card img,
 .ticket-card img {
-  max-width: 60%;
+  max-width: 55%;
   max-height: 45%;
   border-radius: 6px;
   margin-top: 10px;
@@ -241,6 +241,6 @@ h2 {
 
   .match-card,
   .ticket-card {
-    width: 100%;
+    width: 95%;
   }
 }

@@ -232,11 +232,163 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
+  const errorModal = document.getElementById("errorModal");
+  const modalErrorMessage = document.getElementById("modalErrorMessage");
+
+  window.closeModal = function () {
+    errorModal.style.display = "none";
+  };
+
+  function validateForm() {
+    let isValid = true;
+
+    const requiredFields = [
+      { name: "fname", label: "Nom et prénom" },
+      { name: "email", label: "Email" },
+      { name: "adr", label: "Adresse" },
+      { name: "city", label: "Ville" },
+      { name: "state", label: "Département" },
+      { name: "zip", label: "Code" },
+      { name: "cname", label: "Nom sur la Carte" },
+      { name: "ccnum", label: "Credit carte numero" },
+      { name: "expmonth", label: "Mois d'exp" },
+      { name: "expyear", label: "Année d'expérience" },
+      { name: "cvv", label: "CVV" },
+    ];
+
+    clearErrorMessages();
+
+    requiredFields.forEach((field) => {
+      const input = document.getElementById(field.name);
+      const errorElement = document.getElementById(`${field.name}Error`);
+
+      if (input) {
+        const value = input.value.trim();
+
+        if (!value && field.name !== "state") {
+          isValid = false;
+          displayErrorMessage(
+            field.name,
+            errorElement,
+            `${getFieldDisplayName(field.name)} doit être renseigné`
+          );
+        } else {
+          switch (field.name) {
+            case "email":
+              if (value && !isValidEmail(value)) {
+                isValid = false;
+                displayErrorMessage(
+                  field.name,
+                  errorElement,
+                  "Adresse e-mail invalide"
+                );
+              }
+              break;
+            case "ccnum":
+              if (value && !isValidCreditCardNumber(value)) {
+                isValid = false;
+                displayErrorMessage(
+                  field.name,
+                  errorElement,
+                  "Numéro de carte invalide"
+                );
+              }
+              break;
+            case "expmonth":
+              if (value && !isValidMonth(value)) {
+                isValid = false;
+                displayErrorMessage(field.name, errorElement, "Mois invalide");
+              }
+              break;
+            case "expyear":
+              if (value && !isValidYear(value)) {
+                isValid = false;
+                displayErrorMessage(field.name, errorElement, "Année invalide");
+              }
+              break;
+            case "cvv":
+              if (value && !isValidCVV(value)) {
+                isValid = false;
+                displayErrorMessage(field.name, errorElement, "CVV invalide");
+              }
+              break;
+            default:
+              logInputValue(field.label, value);
+              break;
+          }
+        }
+      }
+    });
+
+    return isValid;
+  }
+
+  function getFieldDisplayName(fieldName) {
+    const fieldDisplayNames = {
+      fname: "Nom et prénom",
+      email: "Email",
+      adr: "Adresse",
+      city: "Ville",
+      state: "Département",
+      zip: "Code",
+      cname: "Nom sur la Carte",
+      ccnum: "Credit carte numero",
+      expmonth: "Mois d'exp",
+      expyear: "Année d'expérience",
+      cvv: "CVV",
+    };
+
+    return fieldDisplayNames[fieldName] || fieldName;
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function isValidCreditCardNumber(ccnum) {
+    return !isNaN(ccnum) && parseInt(ccnum) > 0;
+  }
+
+  function isValidMonth(month) {
+    const validMonths = [
+      "january",
+      "february",
+      "march",
+      "april",
+      "may",
+      "june",
+      "july",
+      "august",
+      "september",
+      "october",
+      "november",
+      "december",
+    ];
+    return validMonths.includes(month.toLowerCase());
+  }
+
+  function isValidYear(year) {
+    return !isNaN(year) && parseInt(year) > 0;
+  }
+
+  function isValidCVV(cvv) {
+    return /^[0-9]{3,4}$/.test(cvv);
+  }
+
+  function logInputValue(label, value) {
+    console.log(`${label}: ${value}`);
+  }
 
   if (form) {
     form.addEventListener("submit", (event) => {
       if (!validateForm()) {
         event.preventDefault();
+        const firstErrorFieldName = getFirstErrorFieldName();
+        openModal(
+          "Il y a des erreurs dans le formulaire. Veuillez vérifier et réessayer.",
+          firstErrorFieldName
+        );
       } else {
         const destinationPage = determineDestinationPage();
         form.action = destinationPage;
@@ -244,39 +396,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function validateForm() {
-    let isValid = true;
-
-    const fullNameInput = document.getElementById("fname");
-    const emailInput = document.getElementById("email");
-
-    if (fullNameInput) {
-      if (!fullNameInput.value.trim()) {
-        isValid = false;
-        console.error("Full Name must be filled out");
-      }
-      logInputValue("Full Name", fullNameInput.value.trim());
-    }
-
-    if (emailInput) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value.trim())) {
-        isValid = false;
-        console.error("Invalid Email address");
-      }
-      logInputValue("Email", emailInput.value.trim());
-    }
-
-    return isValid;
-  }
-
-  function logInputValue(label, value) {
-    console.log(`${label}: ${value}`);
-  }
-
   function determineDestinationPage() {
     return "./Buy.html";
   }
+
+  function displayErrorMessage(fieldName, element, message) {
+    if (element) {
+      element.textContent = message;
+      element.classList.add("error-message-visible");
+      element.dataset.fieldName = fieldName;
+      console.log(
+        `Set dataset.fieldName for ${fieldName}: ${element.dataset.fieldName}`
+      );
+    }
+  }
+
+  function getFirstErrorFieldName() {
+    const errorFields = document.querySelectorAll(".error-message-visible");
+    if (errorFields.length > 0) {
+      return errorFields[0].getAttribute("data-field-name");
+    }
+    return "";
+  }
+
+  function clearErrorMessages() {
+    const errorMessages = document.querySelectorAll(".error-message");
+    errorMessages.forEach((errorMessage) => {
+      errorMessage.textContent = "";
+      errorMessage.classList.remove("error-message-visible");
+    });
+  }
+
+  function openModal(errorMessage) {
+    const firstErrorFieldName = getFirstErrorFieldName();
+    modalErrorMessage.textContent = `${errorMessage} (${getFieldDisplayName(
+      firstErrorFieldName
+    )})`;
+    errorModal.style.display = "block";
+  }
+
+  function closeModal() {
+    errorModal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target === errorModal) {
+      closeModal();
+    }
+  };
 });
 
 //Contact form function
