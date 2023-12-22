@@ -480,3 +480,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// Checkout
+
+function validateClick() {
+  const result = prompt("Voulez-vous vraiment annuler?", "oui");
+
+  if (result !== null) {
+    if (result.toLowerCase() === "oui") {
+      window.location.href = "../html/Services.html";
+    } else {
+      alert("Au revoir !");
+    }
+  } else {
+    alert("Annulation de l'opération.");
+  }
+}
+
