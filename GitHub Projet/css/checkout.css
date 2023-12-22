@@ -87,30 +87,6 @@ span.price {
   color: grey;
 }
 
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-}
-
-.Success h1 {
-  color: #333;
-}
-
-.Success p {
-  color: #555;
-}
-
-.Success a {
-  color: #0074d9;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.Success a:hover {
-  text-decoration: underline;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -148,16 +124,40 @@ span.price {
 }
 
 @media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .modal-content {
+    margin: 10px 10px 10px 10px;
+    width: 90%;
+  }
+}
+
+.Success h1 {
+  color: #333;
+}
+
+.Success p {
+  color: #555;
+}
+
+.Success a {
+  color: #0074d9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Success a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
   .Success {
     text-align: center;
   }
 
   .Success h1 {
     font-size: 24px;
-  }
-
-  .modal-content {
-    margin: 10px 10px 10px 10px;
-    width: 90%;
   }
 }

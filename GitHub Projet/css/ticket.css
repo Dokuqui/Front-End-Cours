@@ -20,11 +20,13 @@
 .info-image-City {
   margin-right: 20px;
   margin: 20px 10px;
+  text-align: center;
 }
 
 .info-image-City img {
   max-width: 100%;
   border-radius: 8px; 
+  margin-top: 80px;
   height: 60%; 
   width: 95%;
   object-fit: cover;

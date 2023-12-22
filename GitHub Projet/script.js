@@ -235,10 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorModal = document.getElementById("errorModal");
   const modalErrorMessage = document.getElementById("modalErrorMessage");
 
-  window.closeModal = function () {
-    errorModal.style.display = "none";
-  };
-
   function validateForm() {
     let isValid = true;
 
@@ -444,19 +440,18 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   };
+
+  window.closeModal = function () {
+    errorModal.style.display = "none";
+  };
 });
 
 // Checkout
-
 function validateClick() {
-  const result = prompt("Voulez-vous vraiment annuler?", "oui");
+  const confirmation = confirm("Voulez-vous vraiment annuler?");
 
-  if (result !== null) {
-    if (result.toLowerCase() === "oui") {
-      window.location.href = "../html/Services.html";
-    } else {
-      alert("Au revoir !");
-    }
+  if (confirmation) {
+    window.location.href = "../html/Services.html";
   } else {
     alert("Annulation de l'opération.");
   }
