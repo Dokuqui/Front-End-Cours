@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-75">
         <div class="container">
-          <form action="/action_page.php">
+          <form>
             <div class="row">
               <div class="col-50">
                 <h3>Adresse de facturation</h3>
@@ -112,6 +112,24 @@
               <input type="checkbox" checked="checked" name="sameadr" />
               Adresse de livraison identique à celle de facturation
             </label>
+            <div id="errorModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalErrorMessage" class="error-message"></div>
+                <div id="errorModalFieldName" class="error-field-name"></div>
+                <div id="fnameError" class="error-message" data-field-name="fname"></div>
+                <div id="emailError" class="error-message" data-field-name="email"></div>
+                <div id="adrError" class="error-message" data-field-name="adr"></div>
+                <div id="cityError" class="error-message" data-field-name="city"></div>
+                <div id="stateError" class="error-message" data-field-name="state"></div>
+                <div id="zipError" class="error-message" data-field-name="zip"></div>
+                <div id="cnameError" class="error-message" data-field-name="cname"></div>
+                <div id="ccnumError" class="error-message" data-field-name="ccnum"></div>
+                <div id="expmonthError" class="error-message" data-field-name="expmonth"></div>
+                <div id="expyearError" class="error-message" data-field-name="expyear"></div>
+                <div id="cvvError" class="error-message" data-field-name="cvv"></div>
+              </div>
+            </div>            
             <input type="submit" value="Continuer à payer" class="btn" />
           </form>
         </div>
